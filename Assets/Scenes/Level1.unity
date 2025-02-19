@@ -324,6 +324,9 @@ GameObject:
   - component: {fileID: 441092410}
   - component: {fileID: 441092409}
   - component: {fileID: 441092413}
+  - component: {fileID: 441092417}
+  - component: {fileID: 441092416}
+  - component: {fileID: 441092415}
   - component: {fileID: 441092414}
   m_Layer: 0
   m_Name: Player
@@ -508,7 +511,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 441092408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4da16a88659a2934693deca521bc0108, type: 3}
+  m_Script: {fileID: 11500000, guid: 66279adb737296341b8cff32a36680f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreText: {fileID: 0}
+  HighScoreText: {fileID: 0}
+--- !u!114 &441092415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441092408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d283c7a2e0e718340a7a4c76916467df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  uiController: {fileID: 0}
+  restartButton: {fileID: 0}
+--- !u!114 &441092416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441092408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d02c86c3c1efc1d48a4727a4fe3d574a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  highScore: 0
+  scoreIncrementInterval: 1
+--- !u!114 &441092417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441092408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e7c8c238ecc53409a0a1627f2cf79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Jump: 900
@@ -1451,8 +1498,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 441092414}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 441092417}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
