@@ -18,7 +18,8 @@ public partial class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();  // **Lấy component Rigidbody2D**
         anim = GetComponent<Animator>();   // **Lấy component Animator**
-        LoadGameData();  // **Tải dữ liệu game đã lưu trước đó** (SystemManager)
+        LoadScore();
+        //LoadGameData();  // **Tải dữ liệu game đã lưu trước đó** (SystemManager)
         StartCoroutine(IncreaseScoreOverTime(1f));  // **Bắt đầu Coroutine để tăng điểm** (ScoreManager)
         UpdateUI();      // **Cập nhật giao diện** (UIController)
         Debug.Log("[Start] Game bắt đầu!");
@@ -73,7 +74,8 @@ public partial class Player : MonoBehaviour
             if (score > highScore)  // **Nếu điểm số hiện tại lớn hơn điểm cao nhất**
             {
                 highScore = score;  // **Cập nhật điểm cao nhất**
-                SaveGameData();  // **Lưu dữ liệu game** (SystemManager)
+                //SaveGameData();  // **Lưu dữ liệu game** (SystemManager)
+                SaveScore();
             }
         }
     }
